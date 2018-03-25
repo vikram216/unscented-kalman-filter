@@ -48,6 +48,29 @@ All Kalman filters have three steps
 
 A standard Kalman filter can only handle linear equations. Both the Extended Kalman Filter (EKF) and the Unscented Kalman Filter (UKF) allows you to use non-linear equations. The difference between EKF and UKF is how they handle non-linear equations. Extended Kalman Filter uses the Jacobian matrix to linearize non-linear functions. Unscented Kalman Filter on the other hand, does not need to linearize non-linear functions, instead the unscented Kalman filter takes representative points from a Gaussian distribution.
 
+# Results
+
+The results were visualized with [Sensor Fusion utilities](https://github.com/udacity/CarND-Mercedes-SF-Utilities).
+
+## Visualisation
+
+The following graph compares real and estimated values for car coordinates using data provided by Udacity
+
+![alt text](imgs/UKF.png)
+
+## RMSE
+
+The accuracy requirement is that the algortihm should perform with RMSE error lower than some threshold values. This shown in table below:
+
+| Parameter | RMSE | RMSE threshold |
+|:---------:|:----:|:--------------:|
+|Px         |0.0682| 0.09           |
+|Py         |0.0825| 0.10           |
+|Vx         |0.3356| 0.40           |
+|Vy         |0.2175| 0.30           |
+
+![alt text](imgs/RMSE.png)
+
 
 # Unscented Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
